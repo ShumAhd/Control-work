@@ -6,6 +6,32 @@
 ["1234", "1567", "-2", "computer science"] -> ["-2"]
 ["Russia", "Denmark", "Kazan"] -> [] */
 
+//string[] array = new string[] { "hello", "2", "world", ":-)" };
+string[] array = new string[] { "1234", "1567", "-2", "computer science" };
+//string[] array = new string[] { "Russia", "Denmark", "Kazan" };
 
+void PrintArray(string[] arr)
+{
+    for (int i = 0; i < arr.Length; i++)
+    {
+        Console.Write($"{arr[i]} "); // выводим заданный массив
+    }
+    Console.WriteLine();
+}
+void Formation(string[] arr)
+{
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (arr[i].Length <= 3) // Убираем слова размером больше трёх симвлов
+        {
+            arr[i] = arr[i];
+        }
+        else arr[i] = string.Empty;
+    }
+}
+PrintArray(array);
+Formation(array);
+Console.Write("Итог: ");
+PrintArray(array);
 
 
